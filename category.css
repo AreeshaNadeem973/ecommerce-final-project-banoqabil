@@ -9,7 +9,6 @@
 body {
   background-color: #f4f4f4;
   overflow-x: hidden;
-  padding-top: 80px; /* Adjusts for fixed header */
 }
 
 /* ===== Header ===== */
@@ -44,6 +43,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 0;
 }
 
 .image-banner::before {
