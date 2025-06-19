@@ -33,10 +33,9 @@ header {
   background-position: center;
   height: 40vh;
   display: flex;
-  justify-content: center;   /* Horizontal center */
-  align-items: center;       /* Vertical center */
+  justify-content: center;
+  align-items: flex-start;
   text-align: center;
-  margin-top: 0;
 }
 
 .image-banner::before {
@@ -55,6 +54,7 @@ header {
   z-index: 2;
   color: black;
   text-align: center;
+  padding-top: 40px; /* Top gap */
 }
 
 .banner-content h2 {
