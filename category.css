@@ -10,6 +10,38 @@ body {
   overflow-x: hidden;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== Fixed Header ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Example height */
+  background-color: white;
+  z-index: 1000;
+}
+
+/* Body spacing to push content below header */
+body {
+  padding-top: 60px; 
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+>>>>>>> 467a542d11da80f5f1473aa988ad617004f034a6
 
 /* Banner Section */
 .image-banner {
