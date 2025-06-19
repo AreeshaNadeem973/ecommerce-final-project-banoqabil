@@ -1,4 +1,4 @@
-/* ===== Reset & Global ===== */
+/* ===== Reset & Global Styles ===== */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +9,7 @@
 body {
   background-color: #f4f4f4;
   overflow-x: hidden;
+  padding-top: 80px; /* To prevent content under fixed header */
 }
 
 /* ===== Header ===== */
@@ -24,7 +25,7 @@ header {
 
 /* ===== Banner ===== */
 .image-banner {
-  margin-top: 80px; /* header height ka offset */
+  margin-top: -80px; /* Pull up under header */
   position: relative;
   background-image: url("assets/images/bannner.PNG");
   background-size: cover;
@@ -34,6 +35,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 0;
 }
 
 .image-banner::before {
@@ -50,8 +52,8 @@ header {
 .banner-content {
   position: relative;
   z-index: 2;
-  padding: 14px;
   color: black;
+  padding: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +68,7 @@ header {
   font-size: 1.3rem;
 }
 
-/* ===== Layout ===== */
+/* ===== Layout Section ===== */
 .main {
   display: flex;
   max-width: 1320px;
@@ -76,7 +78,7 @@ header {
   padding: 20px;
 }
 
-/* ===== Sidebar Filter ===== */
+/* ===== Filter Sidebar ===== */
 .filterBox {
   width: 220px;
   background-color: #fff;
@@ -129,7 +131,7 @@ header {
   transform: rotate(45deg);
 }
 
-/* ===== Product Section ===== */
+/* ===== Product Items ===== */
 .product {
   flex: 1;
   display: flex;
@@ -162,8 +164,8 @@ header {
   padding: 10px;
 }
 
-.productItems p,
 .productItems h3,
+.productItems p,
 .productItems h4 {
   padding: 10px;
 }
@@ -208,7 +210,7 @@ header {
   font-size: 24px;
 }
 
-/* ===== Toast ===== */
+/* ===== Toast Notification ===== */
 #toast {
   visibility: hidden;
   min-width: 250px;
@@ -233,7 +235,7 @@ header {
   opacity: 1;
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive Breakpoints ===== */
 @media (max-width: 992px) {
   .productItems {
     width: calc(50% - 10px);
@@ -277,3 +279,4 @@ header {
     padding: 8px;
   }
 }
+
