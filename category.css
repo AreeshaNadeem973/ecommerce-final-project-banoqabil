@@ -1,3 +1,4 @@
+/* ===== Reset & Global ===== */
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +11,24 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== Header (Fixed) ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
 
-/* Banner Section */
+/* Push content below fixed header */
+main {
+  padding-top: 80px;
+}
+
+/* ===== Banner ===== */
 .image-banner {
   position: relative;
   background-image: url("assets/images/bannner.PNG");
@@ -22,11 +39,9 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
-/* Overlay on banner for shading */
+/* Overlay */
 .image-banner::before {
   content: "";
   position: absolute;
@@ -38,7 +53,7 @@ body {
   z-index: 1;
 }
 
-/* Banner text container */
+/* Text inside banner */
 .banner-content {
   position: relative;
   z-index: 2;
@@ -49,17 +64,14 @@ body {
   align-items: center;
 }
 
-/* Banner Heading */
 .banner-content h2 {
   font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
-/* Banner Paragraph */
 .banner-content p {
   font-size: 1.3rem;
 }
-
 
 /* ===== Layout ===== */
 .main {
@@ -105,7 +117,6 @@ body {
   background-color: #fff;
   position: relative;
   cursor: pointer;
-  transition: 0.2s ease;
 }
 
 .CategoryList input[type="checkbox"]:checked {
@@ -155,21 +166,21 @@ body {
   width: 100%;
   height: 200px;
   object-fit: contain;
-  background-color: #fff;
   padding: 10px;
+  background-color: #fff;
 }
 
+.productItems h3,
 .productItems p,
-.productItems h3 {
+.productItems h4 {
   padding: 10px;
 }
 
 .productItems h4 {
-  padding: 10px;
   border-bottom: 1px solid #ccc;
 }
 
-/* ===== Add to Cart Button ===== */
+/* ===== Add to Cart ===== */
 .add-to-cart {
   margin: 10px;
   padding: 10px;
@@ -179,7 +190,6 @@ body {
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 .add-to-cart:hover {
@@ -209,6 +219,41 @@ body {
 #toast.show {
   visibility: visible;
   opacity: 1;
+}
+
+/* ===== Back to Top ===== */
+#backToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 45px;
+  height: 45px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  z-index: 10000;
+  font-size: 24px;
+}
+
+/* ===== Notification ===== */
+.notification {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: #e74c3c;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 10000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
 }
 
 /* ===== Responsive ===== */
@@ -241,43 +286,17 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .banner-content h2 {
+    font-size: 1.8rem;
+  }
 
-/* ===== Notification popup ===== */
-.notification {
-  position: fixed;
-  top: 90px;
-  right: 20px;
-  background: #e74c3c;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  z-index: 10000;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
+  .banner-content p {
+    font-size: 1rem;
+  }
 
-/* ===== Back to top button ===== */
-#backToTopBtn {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  width: 45px;
-  height: 45px;
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-  z-index: 10000;
-  transition: opacity 0.3s ease;
-  font-size: 24px;
-}
-
-#backToTopBtn:hover {
-  background-color: #c0392b;
+  .add-to-cart {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
