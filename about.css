@@ -21,7 +21,7 @@ body {
 /* Banner Section */
 .image-banner {
   position: relative;
-  background-image: url("assets/images/bannner.PNG");
+  background-image: url("assets/images/bannner.png");
   background-size: cover;
   background-position: center;
   height: 40vh;
@@ -117,7 +117,8 @@ body {
   opacity: 0;
   transform: scale(0.95);
   animation: fadeInScale 1s forwards;
-  max-width: 100%; 
+  max-width: 100%; /* Prevent image overflow */
+}
 
 /* Hover & touched effect on about image */
 .about-image img:hover,
@@ -384,5 +385,4 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
-}
 }
