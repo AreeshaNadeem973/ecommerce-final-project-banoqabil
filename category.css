@@ -1,3 +1,4 @@
+/* ===== Reset & Global ===== */
 * {
   margin: 0;
   padding: 0;
@@ -17,12 +18,13 @@ header {
   width: 100%;
   background-color: white;
   padding: 15px 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
 /* ===== Banner ===== */
 .image-banner {
+  margin-top: 80px; /* header height ka offset */
   position: relative;
   background-image: url("assets/images/bannner.PNG");
   background-size: cover;
@@ -32,7 +34,6 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 80px; /* Push banner down to make space for fixed header */
 }
 
 .image-banner::before {
@@ -128,7 +129,7 @@ header {
   transform: rotate(45deg);
 }
 
-/* ===== Products ===== */
+/* ===== Product Section ===== */
 .product {
   flex: 1;
   display: flex;
@@ -171,7 +172,7 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
-/* ===== Add to Cart ===== */
+/* ===== Add to Cart Button ===== */
 .add-to-cart {
   margin: 10px;
   padding: 10px;
@@ -187,7 +188,7 @@ header {
   background-color: #d35400;
 }
 
-/* ===== Back to Top ===== */
+/* ===== Back to Top Button ===== */
 #backToTopBtn {
   position: fixed;
   bottom: 40px;
