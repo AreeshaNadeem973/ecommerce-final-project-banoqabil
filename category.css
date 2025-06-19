@@ -20,7 +20,7 @@ body {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* Example fixed header (you might already have this in your header.css) */
+
 header {
   position: fixed;
   top: 0;
@@ -33,7 +33,7 @@ header {
 
 /* Body spacing to push content below header */
 body {
-  padding-top: 60px; /* Same as header height */
+  padding-top: 60px; 
   margin: 0;
   font-family: "Arial", sans-serif;
   background-color: #fff;
