@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - StyleHub</title>
+    <link rel="stylesheet" href="shop.css" />
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css" />
+    <!-- FontAwesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo Section linking to home page -->
+        <div class="nav-logo"><a href="index.html">StyleHub</a></div>
+
+        <!-- Navigation Menu Links -->
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="shop.html" class="nav-link">Shop</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="category.html" class="nav-link">Category</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <!-- Icons for User Profile and Shopping Cart -->
+        <div class="nav-icons">
+          <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+          <a href="#" class="nav-icon cart-link">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+
+        <!-- Hamburger Menu for Mobile View -->
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+    <!-- Banner Section with Welcome Message about the company -->
+    <section class="image-banner">
+      <div class="banner-content">
+        <h2>Our Products</h2>
+        <p>Explore our exclusive product range</p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="men">Men</button>
+        <button class="filter-btn" data-filter="women">Women</button>
+        <button class="filter-btn" data-filter="accessories">
+          Accessories
+        </button>
+      </div>
+    </section>
+
+    <!-- Product Listing -->
+    <div class="main">
+      <div class="product">
+        <!-- Products will be inserted here -->
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h2 class="footer-title">StyleHub</h2>
+            <p>
+              Your premium destination for fashion and style. Shop the trendiest
+              looks now.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">On Sale</a></li>
+              <li><a href="#">Gift Cards</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Customer Support</h4>
+            <ul>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>Subscribe</h4>
+            <p>Sign up for exclusive offers and updates.</p>
+            <form id="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscribe-message"></p>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2025 StyleHub. All Rights Reserved.</div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+      <i class="fas fa-check-circle toast-icon"></i>
+      Product has been added to the cart!
+    </div>
+
+    <!-- JS -->
+    <script src="header.js"></script>
+    <script src="shop.js"></script>
+    <script src="footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - StyleHub</title>
+  <link rel="stylesheet" href="login.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="container" id="loginFormContainer">
+    <!-- Toast outside form box, but inside container -->
+    <div class="toast" id="toast">This is a toast</div>
+    
+    <div class="form-box">
+      <h1 id="title">Sign Up</h1>
+      <form id="form" autocomplete="off">
+        <div class="input-group">
+          <div class="input-field" id="nameField">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Name" id="name" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')" />
+          </div>
+          <div class="input-field">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Email" id="email" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')" />
+          </div>
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Password" id="password" autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly')" />
+            <i class="fa fa-eye toggle-password" onclick="togglePassword()"></i>
+          </div>
+          <div class="remember-me">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Remember me</label>
+          </div>
+          <p>Lost password? <a href="#">Click here</a></p>
+        </div>
+        <div class="btn-field">
+          <button type="button" id="signupBtn">Sign up</button>
+          <button type="button" id="signinBtn" class="disable">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
