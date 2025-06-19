@@ -1,0 +1,167 @@
+/* ===========================
+   Global Reset & Base Styles
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* ===========================
+   Navbar Styles
+   =========================== */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: relative;
+}
+
+/* Logo */
+.nav-logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e74c3c;
+}
+
+/* Icons (cart, user, etc.) */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-icon {
+  position: relative;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-icon:hover,
+.nav-icon.active {
+  color: #e74c3c;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1100;
+  position: relative;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* ===========================
+   Responsive Styles
+   =========================== */
+@media (max-width: 768px) {
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Mobile menu styles */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    z-index: 1000;
+    transform: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 10px 20px;
+  }
+
+  /* Show nav-icons next to hamburger on mobile */
+  .nav-icons {
+    position: absolute;
+    right: 70px; 
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 1rem;
+    background: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-container {
+    position: relative;
+  }
+}
+
+/* Optional: Adjust icon size for very small screens */
+@media (max-width: 480px) {
+  .nav-logo a {
+    font-size: 1.3rem;
+  }
+  .nav-icon {
+    font-size: 1rem;
+  }
+}

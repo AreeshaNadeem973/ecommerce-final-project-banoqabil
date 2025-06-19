@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleHub - Premium Clothing Store</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="nav-logo"><a href="index.html">StyleHub</a></div>
+
+        <!-- Navigation links -->
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="shop.html" class="nav-link">Shop</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="category.html" class="nav-link">Category</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <!-- Icons for user and shopping cart -->
+        <div class="nav-icons">
+          <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+          <a href="#" class="nav-icon cart-link">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+
+        <!-- Hamburger menu for mobile -->
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Elevate Your Style</h1>
+        <p>Discover our premium collection for the modern lifestyle</p>
+        <a href="shop.html" class="cta-button">Shop Now</a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="assets/images/hero-section.png"
+          alt="Fashion Model"
+        />
+      </div>
+    </section>
+  
+
+    <!-- Featured Categories -->
+    <section class="categories">
+      <div class="container">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+          <div class="category-card">
+            <img
+            src="assets/images/category1.jpeg"
+              alt="Men's Fashion"
+            />
+            <div class="category-info">
+              <h3>Men's Collection</h3>
+            </div>
+          </div>
+          <div class="category-card">
+            <img
+              src="assets/images/category2.jpeg"
+              alt="Women's Fashion"
+            />
+            <div class="category-info">
+              <h3>Women's Collection</h3>
+            </div>
+          </div>
+          <div class="category-card">
+            <img
+              src="assets/images/category3.jpeg"
+              alt="Accessories"
+            />
+            <div class="category-info">
+              <h3>Accessories</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+      <div class="container">
+        <div class="trending-banner">
+          <div class="trending-content">
+            <h2>Summer Collection 2025</h2>
+            <p>Discover the latest trends for the season</p>
+            <a href="category.html" class="cta-button">View Collection</a>
+          </div>
+          <div class="trending-image">
+            <img
+            src="assets/images//summer-collection.webp"
+              alt="Summer Collection"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img
+              src="assets/images/product1.png"
+              alt="Premium T-Shirt"
+            />
+            <div class="product-info">
+              <h3>Premium Cotton T-Shirt</h3>
+              <p class="price">$29.99</p>
+              <button
+                class="add-to-cart"
+                data-id="1"
+                data-name="Premium Cotton T-Shirt"
+                data-price="29.99"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/product2.png"
+              alt="Designer Jeans"
+            />
+            <div class="product-info">
+              <h3>Designer Slim Jeans</h3>
+              <p class="price">$79.99</p>
+              <button
+                class="add-to-cart"
+                data-id="2"
+                data-name="Designer Slim Jeans"
+                data-price="79.99"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/product3.png"
+              alt="Casual Hoodie"
+            />
+            <div class="product-info">
+              <h3>Casual Hoodie</h3>
+              <p class="price">$49.99</p>
+              <button
+                class="add-to-cart"
+                data-id="3"
+                data-name="Casual Hoodie"
+                data-price="49.99"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+    </section>
+
+     <!-- Team Section introducing the key team members -->
+    <section class="team-section">
+      <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <!-- Individual team member with photo, name, and role -->
+          <div class="team-member">
+            <img src="assets/images/Team-1.png" alt="Sarah Johnson" />
+            <h3>Sarah Johnson</h3>
+            <p>Founder & CEO</p>
+          </div>
+          <div class="team-member">
+            <img src="assets/images/Team-2.png" alt="Mike Chen" />
+            <h3>Mike Chen</h3>
+            <p>Head of Design</p>
+          </div>
+          <div class="team-member">
+            <img src="assets/images/Team-3.png" alt="Emily Rodriguez" />
+            <h3>Emily Rodriguez</h3>
+            <p>Marketing Director</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Footer Top Section: Brand and Links -->
+        <div class="footer-top">
+          <!-- Brand info and social links -->
+          <div class="footer-brand">
+            <h2 class="footer-title">StyleHub</h2>
+            <p>
+              Your premium destination for fashion and style. Shop the trendiest
+              looks now.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <!-- Shop links -->
+          <div class="footer-links">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">On Sale</a></li>
+              <li><a href="#">Gift Cards</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Support links -->
+          <div class="footer-links">
+            <h4>Customer Support</h4>
+            <ul>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Subscription -->
+          <div class="footer-newsletter">
+            <h4>Subscribe</h4>
+            <p>Sign up for exclusive offers and updates.</p>
+            <form id="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <!-- Message area for subscription status -->
+            <p id="subscribe-message"></p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">© 2025 StyleHub. All Rights Reserved.</div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Links -->
+    <script src="header.js"></script>
+    <script src="script.js"></script>
+    <script src="footer.js"></script>
+
+  </body>
+</html>

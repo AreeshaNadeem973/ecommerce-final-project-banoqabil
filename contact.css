@@ -1,0 +1,386 @@
+/* ====== Contact Page Styles ====== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden; 
+  background-color: #f9f9f9;
+  padding-top: 60px; 
+}
+
+/* Banner with background image */
+.image-banner {
+  position: relative;
+  background-image: url("assets/images/bannner.PNG");
+  background-size: cover; 
+  background-position: center;
+  height: 40vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  max-width: 100%; 
+}
+
+/* Dark overlay on banner */
+.image-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(189, 187, 187, 0.6); 
+  z-index: 1;
+}
+
+/* Text on banner */
+.banner-content {
+  position: relative;
+  z-index: 2; /* On top of overlay */
+  padding: 14px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Banner title */
+.banner-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+/* Banner paragraph */
+.banner-content p {
+  font-size: 1.3rem;
+  word-wrap: break-word;
+}
+
+/* Contact section padding */
+.contact-section {
+  padding: 80px 40px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Two columns for contact info and form */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 3rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+/* Contact info styles */
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.contact-info > p {
+  margin-bottom: 2rem;
+  color: #666;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+/* Contact details list */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Each contact item: icon + text */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  word-wrap: break-word;
+}
+
+/* Icon style */
+.contact-item i {
+  font-size: 1.5rem;
+  color: #e74c3c; /* Red */
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+/* Contact item heading */
+.contact-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Contact item paragraph */
+.contact-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Contact form container */
+.contact-form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Form title */
+.contact-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Spacing for form groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs and textareas style */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Focus style */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  background: #e74c3c;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Button hover */
+.submit-btn:hover {
+  background: #c0392b;
+}
+
+/* ===== Responsive: tablets and smaller ===== */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* One column */
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 1.5rem;
+  }
+
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+
+  .image-banner {
+    height: 30vh;
+    background-position: center;
+  }
+
+  .banner-content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .banner-content h2 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+}
+
+/* ===== Responsive: phones ===== */
+@media (max-width: 480px) {
+  body {
+    padding-top: 40px;
+  }
+
+  .banner-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .banner-content p {
+    font-size: 0.85rem;
+  }
+
+  .image-banner {
+    height: 25vh;
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* Add padding for mobile screens */
+  .contact-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contact-grid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact-form-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .follow-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+/* ===== Notification popup ===== */
+.notification {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: #e74c3c;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 10000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+/* ===== Back to top button ===== */
+#backToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 45px;
+  height: 45px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  z-index: 10000;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+#backToTopBtn:hover {
+  background-color: #c0392b;
+}
+
+/* ===== Follow us section ===== */
+.follow-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.follow-section h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.follow-section p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #c0392b;
+}
+
+/* ===== Mobile scroll fix ===== */
+
+/* Prevent horizontal scrolling */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Make images and videos fit inside screen */
+img, video, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}

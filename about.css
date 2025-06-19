@@ -1,0 +1,388 @@
+/* Global Reset & Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent horizontal overflow on entire document */
+html, body {
+  overflow-x: hidden;  
+}
+
+/* Body Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden; 
+  background-color: #f9f9f9;
+  padding-top: 60px; 
+}
+
+/* Banner Section */
+.image-banner {
+  position: relative;
+  background-image: url("assets/images/bannner.PNG");
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 0;  
+  padding-right: 0;
+}
+
+/* Overlay on banner for shading */
+.image-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(189, 187, 187, 0.6);
+  z-index: 1;
+}
+
+/* Banner text container */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 14px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Banner Heading */
+.banner-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+/* Banner Paragraph */
+.banner-content p {
+  font-size: 1.3rem;
+}
+
+/* About Section Container */
+.about-content {
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+/* Grid layout for About Section - 2 columns */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Text container in About */
+.about-text {
+  padding-left: 30px;
+}
+
+/* About Section Headings */
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Subheading in About Section */
+.about-text h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  color: #333;
+}
+
+/* Paragraphs in About Section */
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* About Image Styling */
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 1s forwards;
+  max-width: 100%; 
+
+/* Hover & touched effect on about image */
+.about-image img:hover,
+.about-image img.touched {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Fade in & scale animation */
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Values Section Styling */
+.values-section {
+  padding: 80px 20px; /* added left & right padding */
+  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+/* Values Section Heading */
+.values-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+/* Responsive grid for values cards */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual Value Card */
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for value card */
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon in value card */
+.value-card i {
+  font-size: 3rem;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+/* Value card heading */
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Value card paragraph */
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Team Section Styling */
+.team-section {
+  padding: 80px 20px; /* added left & right padding */
+  box-sizing: border-box;
+}
+
+/* Team Section Heading */
+.team-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+/* Grid layout for team members */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual Team Member Card */
+.team-member {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on team member card */
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+/* Team member photo styling */
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  max-width: 100%; 
+}
+
+/* Team member name */
+.team-member h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Team member role or title */
+.team-member p {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Notification Popup Styling */
+.notification {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: #e74c3c;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Back to Top Button Styling */
+#backToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 45px;
+  height: 45px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Back to Top Button hover effect */
+#backToTopBtn:hover {
+  background-color: #c0392b;
+} 
+
+/* Tablet screens: stack grids and adjust font sizes */
+@media (max-width: 992px) {
+  .about-grid,
+  .values-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 2rem;
+  }
+
+  .banner-content h2 {
+    font-size: 2rem;
+  }
+
+  .banner-content p {
+    font-size: 1.1rem;
+  }
+
+  .about-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .image-banner {
+    height: 30vh;
+    padding: 20px;
+  }
+}
+
+/* Mobile screens: further font and padding adjustments */
+@media (max-width: 576px) {
+  body {
+    padding-top: 50px;
+  }
+
+  .image-banner {
+    height: 25vh;
+    margin-top: 0;
+    padding: 10px;
+  }
+
+  .banner-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .banner-content p {
+    font-size: 0.95rem;
+  }
+
+  .about-text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text h3 {
+    font-size: 1rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .values-section h2,
+  .team-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .value-card,
+  .team-member {
+    padding: 1rem;
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-member h3 {
+    font-size: 1rem;
+  }
+
+  /* Reduce horizontal padding on small screens */
+  .about-content,
+  .values-section,
+  .team-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+}
