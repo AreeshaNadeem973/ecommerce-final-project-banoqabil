@@ -25,19 +25,13 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: var(--text);
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  width: 100vw; /* Full viewport width */
-  box-sizing: border-box;
 }
 
 /* ===========================
    Layout Wrappers
    =========================== */
 .wrapper {
-  padding: 0 var(--gap);
-  width: 100vw;
-  box-sizing: border-box;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  padding: 0 var(--gap); /* Horizontal padding */
 }
 
 .container {
@@ -56,12 +50,10 @@ body {
   flex-wrap: wrap;
   min-height: 80vh;
   background: var(--light);
-  padding: 0 var(--gap); /* Removed top padding to start just below header */
+  padding: 20px var(--gap) 0 var(--gap); /* Add small top gap */
   gap: 30px;
   margin: 0 auto;
   max-width: 1200px;
-  width: 100vw;
-  box-sizing: border-box;
 }
 
 .hero-content {
@@ -98,7 +90,7 @@ body {
 }
 
 .hero-image:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* ===========================
@@ -638,13 +630,11 @@ body {
   }
 
   .hero {
-    padding: 15px 15px 0 15px;
+    padding: 15px 15px 0 15px; /* Smaller top gap for tablet */
     min-height: auto;
     flex-direction: column;
     text-align: center;
     gap: 40px;
-    width: 100vw;
-    box-sizing: border-box;
   }
 
   .hero-content {
@@ -731,6 +721,19 @@ body {
   .featured-products h2,
   .team-section h2 {
     font-size: 1.8rem;
+    white-space: nowrap;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+  }
+
+  .category-info h3,
+  .product-info h3 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -743,40 +746,34 @@ body {
     --padding: 30px;
   }
 
-  body, .wrapper {
-    overflow-x: hidden;
-    width: 100vw;
-    box-sizing: border-box;
+  body {
+    padding-top: 75px; /* Adjust according to header height */
   }
 
   .hero {
-    flex-direction: column;
-    padding: 20px 15px 0 15px;
+    padding: 10px 15px 0 15px; /* Smallest top gap for mobile */
     gap: 30px;
-    margin-top: 60px; /* space below header */
-    width: 100vw;
-    box-sizing: border-box;
+    margin-top: 20px; /* Add extra gap from top on mobile */
   }
 
   .hero-content {
-    max-width: 100%;
-    margin-top: 10px;
+    margin-top: 0; /* Remove extra margin, handled by body padding */
     padding: 0 10px;
-    text-align: center;
   }
 
   .hero-content h1 {
     font-size: 1.8rem;
+    margin-bottom: 15px;
   }
 
   .hero-content p {
     font-size: 0.95rem;
+    margin-bottom: 25px;
   }
 
   .hero-image {
-    max-width: 100%;
-    height: auto;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   .hero-image img {
@@ -785,45 +782,55 @@ body {
     object-fit: contain;
   }
 
-  .category-grid,
-  .product-grid,
-  .team-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .categories h2,
+  .featured-products h2,
+  .team-section h2 {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .category-card,
   .product-card {
-    height: auto;
-    min-height: 350px;
+    min-height: 400px;
   }
 
   .category-card img,
   .product-card img {
-    height: 220px;
+    height: 320px;
     padding: 10px;
   }
 
   .category-info,
   .product-info {
-    padding: 10px;
+    padding: 12px;
     text-align: center;
   }
 
   .category-info h3,
   .product-info h3 {
+    text-align: center;
     font-size: 1rem;
     margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .categories h2,
-  .featured-products h2,
-  .team-section h2 {
-    font-size: 1.5rem;
+  .product-info {
+    padding: 10px;
   }
 
-  .cta-button {
-    padding: 10px 25px;
-    font-size: 1rem;
+  .add-to-cart {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  #backToTopBtn {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
   }
 }
