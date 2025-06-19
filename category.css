@@ -24,7 +24,7 @@ header {
 
 /* ===== Banner ===== */
 .image-banner {
-  margin-top: 80px; /* Header height adjust */
+  margin-top: 80px; /* Header ke height ka adjustment */
   position: relative;
   background-image: url("assets/images/bannner.PNG");
   background-size: cover;
@@ -32,9 +32,9 @@ header {
   height: 40vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* align to top */
+  align-items: flex-start;
   text-align: center;
-  padding-top: 40px; /* top gap for text */
+  padding-top: 40px;
 }
 
 .image-banner::before {
