@@ -8,57 +8,36 @@
 body {
   background-color: #f4f4f4;
   overflow-x: hidden;
+  padding-top: 80px; /* gap for header */
 }
 
-<<<<<<< HEAD
-=======
-/* ===== Fixed Header ===== */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  z-index: 999;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
+/* ===== Header (example style) ===== */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* Example height */
-  background-color: white;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
-/* Body spacing to push content below header */
-body {
-  padding-top: 60px; 
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  background-color: #fff;
-  color: #333;
-}
->>>>>>> 467a542d11da80f5f1473aa988ad617004f034a6
-
-/* Banner Section */
+/* ===== Banner ===== */
 .image-banner {
   position: relative;
   background-image: url("assets/images/bannner.PNG");
   background-size: cover;
   background-position: center;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  padding-top: 60px;
+  margin-bottom: 30px;
 }
 
-/* Overlay on banner for shading */
 .image-banner::before {
   content: "";
   position: absolute;
@@ -70,28 +49,25 @@ body {
   z-index: 1;
 }
 
-/* Banner text container */
 .banner-content {
   position: relative;
   z-index: 2;
-  padding: 14px;
+  padding: 30px 14px;
   color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
 
-/* Banner Heading */
 .banner-content h2 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 
-/* Banner Paragraph */
 .banner-content p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
-
 
 /* ===== Layout ===== */
 .main {
@@ -243,37 +219,6 @@ body {
   opacity: 1;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 992px) {
-  .productItems {
-    width: calc(50% - 10px);
-  }
-}
-
-@media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-  }
-
-  .filterBox {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .productItems {
-    width: 100%;
-  }
-
-  .banner-content h2 {
-    font-size: 2.2rem;
-  }
-
-  .banner-content p {
-    font-size: 1.1rem;
-  }
-}
-
-
 /* ===== Notification popup ===== */
 .notification {
   position: fixed;
@@ -312,4 +257,49 @@ body {
 
 #backToTopBtn:hover {
   background-color: #c0392b;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .productItems {
+    width: calc(50% - 10px); /* 2 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .filterBox {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .productItems {
+    width: 100%;
+  }
+
+  .banner-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .banner-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .add-to-cart {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
