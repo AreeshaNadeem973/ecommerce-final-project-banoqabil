@@ -11,6 +11,17 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 20px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
 /* ===== Banner ===== */
 .image-banner {
   position: relative;
@@ -22,8 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin-top: 80px; /* ✅ Adjusted to stay below fixed header */
 }
 
 .image-banner::before {
@@ -40,7 +50,7 @@ body {
 .banner-content {
   position: relative;
   z-index: 2;
-  padding: 14px;
+  padding: 30px 14px 14px 14px; /* ✅ Top padding added */
   color: black;
   display: flex;
   flex-direction: column;
@@ -55,7 +65,6 @@ body {
 .banner-content p {
   font-size: 1.3rem;
 }
-
 
 /* ===== Layout ===== */
 .main {
@@ -270,3 +279,4 @@ body {
     padding: 8px;
   }
 }
+
