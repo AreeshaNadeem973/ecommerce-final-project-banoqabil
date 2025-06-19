@@ -1,4 +1,4 @@
-/* ===== Reset & Global ===== */
+/* ===== Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -9,23 +9,23 @@
 body {
   background-color: #f4f4f4;
   overflow-x: hidden;
+  padding-top: 80px; /* To give space for fixed header */
 }
 
-/* ===== Header (Fixed) ===== */
+/* ===== Header ===== */
 header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   background-color: white;
   padding: 15px 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-/* Push content below fixed header */
-main {
-  padding-top: 80px;
+.navbar h1 {
+  font-size: 24px;
+  color: #333;
 }
 
 /* ===== Banner ===== */
@@ -41,7 +41,6 @@ main {
   text-align: center;
 }
 
-/* Overlay */
 .image-banner::before {
   content: "";
   position: absolute;
@@ -53,15 +52,11 @@ main {
   z-index: 1;
 }
 
-/* Text inside banner */
 .banner-content {
   position: relative;
   z-index: 2;
-  padding: 14px;
   color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 10px;
 }
 
 .banner-content h2 {
@@ -153,25 +148,24 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .productItems:hover {
   transform: translateY(-8px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .productItems img {
   width: 100%;
   height: 200px;
   object-fit: contain;
-  padding: 10px;
   background-color: #fff;
+  padding: 10px;
 }
 
-.productItems h3,
 .productItems p,
+.productItems h3,
 .productItems h4 {
   padding: 10px;
 }
@@ -196,31 +190,6 @@ main {
   background-color: #d35400;
 }
 
-/* ===== Toast ===== */
-#toast {
-  visibility: hidden;
-  min-width: 250px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  border-radius: 6px;
-  padding: 16px;
-  position: fixed;
-  z-index: 9999;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
-  font-size: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transition: visibility 0s, opacity 0.5s ease-in-out;
-  opacity: 0;
-}
-
-#toast.show {
-  visibility: visible;
-  opacity: 1;
-}
-
 /* ===== Back to Top ===== */
 #backToTopBtn {
   position: fixed;
@@ -241,22 +210,7 @@ main {
   font-size: 24px;
 }
 
-/* ===== Notification ===== */
-.notification {
-  position: fixed;
-  top: 90px;
-  right: 20px;
-  background: #e74c3c;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  z-index: 10000;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
-
-/* ===== Responsive ===== */
+/* ===== Responsive Design ===== */
 @media (max-width: 992px) {
   .productItems {
     width: calc(50% - 10px);
